@@ -1,5 +1,5 @@
 {
-    "name": "example-create-react-app-express",
+    "name": "linqia-web-test",
     "version": "1.0.0",
     "scripts": {
         "client": "cd client && yarn start",
@@ -9,9 +9,10 @@
         "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
     },
     "dependencies": {
-        "express": "^4.16.2"
+        "express": "^4.16.2",
+        "twitter": "^1.7.1"
     },
     "devDependencies": {
         "concurrently": "^3.5.0"
     }
-  }
+}
