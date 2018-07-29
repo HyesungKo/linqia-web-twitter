@@ -10,7 +10,7 @@ $yarn install
 $cd ..
 $yarn dev
 
-The server open at localhost:5000
-the client open at localhost:3000
+The server opens at localhost:5000
+the client opens at localhost:3000
 
 Enjoy!
