@@ -10,6 +10,7 @@ class TweetBox extends Component {
                 {this.props.tweets.length === 0 &&
                     <h3>Please type one or two hashtags for searching tweets</h3>
                 }
+                {/* mapping the tweets and send each tweets to Tweet.js file */}
                 {
                     this.props.tweets 
                         .map(tweet =>   

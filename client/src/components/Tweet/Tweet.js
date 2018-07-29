@@ -5,11 +5,13 @@ class Tweet extends Component {
     render() {
         return (
             <div>
+                {/* show "Please wait!" text while requesting tweets*/}
                 {this.props.info.text === "Please wait!" &&
                     <p>
                         {this.props.info.text}
                     </p>
                 }
+                {/* simple ui for each tweet */}
                 {this.props.info.text !== "Please wait!" &&
                     <div className="card">
                         <h3 className="user">

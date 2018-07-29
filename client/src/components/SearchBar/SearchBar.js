@@ -7,8 +7,9 @@ class SearchBar extends Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        //the default value of state
         this.state = {
-            hashtag1: 'us',
+            hashtag1: '',
             hashtag2: '',
             count: 10,
             result_type: 'popular',
@@ -16,6 +17,7 @@ class SearchBar extends Component {
         }
     }
 
+    //When inputs change, handleChange function will change the state of SearchBar component
     handleChange(type, event) {
         if(type === 'h1'){
             this.setState({hashtag1: event.target.value});
@@ -25,6 +27,7 @@ class SearchBar extends Component {
             this.setState({count: event.target.value});
         } else if (type === 'sort') {
             this.setState({sortBy: event.target.value});
+            //call handleSort function in App.js file to sort the current requested tweets
             this.props.onChange(event.target.value)
         } else if (type === 'result_type'){
             this.setState({result_type: event.target.value});
@@ -32,6 +35,7 @@ class SearchBar extends Component {
     }
 
     handleSubmit(event) {
+        //call searchTweets function in App.js file for searching tweets
         this.props.onClick(this.state);
         event.preventDefault();
     }
